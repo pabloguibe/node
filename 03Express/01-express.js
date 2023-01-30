@@ -29,8 +29,11 @@ app.use(express.static(__dirname + '/public'));
 app.set("views", __dirname + '/views');
 app.set("view engine", 'ejs');
 
+
 app.use('/', require('./router/rutas'))
 app.use('/pokemon', require('./router/pokemon'))
+
+
 
 app.use((req,res) => {
     res.status(404).render("404", {titulo: "ERROR 404", descripcion: "Page Not Found"})

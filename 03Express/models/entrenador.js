@@ -1,15 +1,13 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const pokemonSchema = new Schema({
+const entrenadorSchema = new Schema({
     nombre: String,
     tipo: String,
     descripcion: String
 })
 
 //Creamos el modelo
-const Pokemon = mongoose.model('DBPokemon', pokemonSchema, "pokemon");
+const Entrenador = mongoose.model('DBPokemon', entrenadorSchema, "entrenador");
 
-module.exports = Pokemon;
-
-
+module.exports = Entrenador;
